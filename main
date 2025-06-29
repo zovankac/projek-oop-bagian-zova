@@ -1,0 +1,20 @@
+package DimYum;
+
+import javax.swing.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // Data produk dengan gambar
+        Product[] products = {
+                new Product("Classic Charm", 20000, 2, "classic_charm.png"),
+                new Product("Choco Bliss", 22000, 2, "coklat.jpg"),
+                new Product("Savory Bolo", 30000, 1, "savory_balo.png"),
+                new Product("Cheesy Melt", 30000, 1, "cheesy_melt.png")
+        };
+
+        SwingUtilities.invokeLater(() -> {
+            ShoppingCartUI shoppingCart = new ShoppingCartUI(products);
+            shoppingCart.setVisible(true);
+        });
+    }
+}
